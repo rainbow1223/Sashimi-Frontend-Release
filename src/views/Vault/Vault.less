@@ -1,0 +1,145 @@
+.vault-card {
+  border: 1px solid #E8E8E8;
+  border-radius: 3px;
+  padding: 8px;
+  max-width: 924px;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
+.vault-total-info-container {
+  border: 1px solid #E8E8E8;
+  border-radius: 3px;
+}
+
+.vault-balance {
+  text-align: left;
+}
+
+.vault-info-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.vault-exchange-ratio {
+  padding: 8px 16px 0 16px;
+}
+
+.vault-display-block {
+  display: block;
+}
+
+.vault-input-number {
+  width: 100% !important;
+}
+
+.vault-info-subtitle {
+  color: #999;
+  font-size: 12px;
+}
+
+.vault-blank {
+  height: 16px;
+  width: 10px;
+}
+
+.vault-stable-info {
+  padding: 8px 16px;
+  border-bottom: 1px solid #E8E8E8;
+  &:hover {
+    background: #EEE;
+  }
+}
+
+.vault-stable-info-hidden {
+  border-bottom: 1px solid #FFF;
+}
+
+.vault-operation-card {
+  text-align: right;
+  padding: 8px 16px 16px 16px;
+}
+
+.vault-operation-panel {
+  transition: height 0.5s;
+  -webkit-transition: height 0.5s; /* Safari */
+  width: 100%;
+  height: 326px;
+  overflow: hidden;
+}
+
+.vault-operation-info-bg {
+  background: #f2f2f2;
+  margin: 16px 16px 0 16px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  color: #999;
+}
+
+.vault-operation-panel-hidden {
+  transition: height 0.5s;
+  -webkit-transition: height 0.5s; /* Safari */
+  height: 0;
+}
+
+.vault-max-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.vault-button-container {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .vault-card {
+    margin: 16px;
+    margin-bottom: 8px;
+    padding: 4px;
+  }
+
+  .vault-operation-panel {
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s; /* Safari */
+    width: 100%;
+    height: 554px;
+    overflow: hidden;
+  }
+
+  .vault-operation-panel-hidden {
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s; /* Safari */
+    height: 0;
+  }
+
+  .vault-operation-card {
+    text-align: right;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .vault-info-title {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .vault-info-subtitle {
+    color: #999;
+    font-size: 12px;
+  }
+
+  .vault-stable-info {
+    padding: 2px 4px;
+  }
+
+  .vault-blank {
+    height: 8px;
+    width: 5px;
+  }
+
+  .vault-exchange-ratio {
+    padding: 4px 8px 0 8px;
+  }
+}

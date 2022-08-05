@@ -1,0 +1,82 @@
+{
+  "name": "sashimi",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@types/debounce": "^1.2.0",
+    "@types/jest": "^26.0.9",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.46",
+    "antd": "^4.2.2",
+    "axios": "^0.20.0",
+    "bignumber.js": "^9.0.0",
+    "debounce": "^1.2.0",
+    "numeral": "^2.0.6",
+    "react": "^16.13.1",
+    "react-circular-progressbar": "^2.0.3",
+    "react-countdown": "^2.2.1",
+    "react-countup": "^4.3.3",
+    "react-dom": "^16.13.1",
+    "react-if": "^3.4.3",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-use": "^15.3.4",
+    "styled-components": "^5.1.1",
+    "typescript": "^3.9.7",
+    "use-wallet": "^0.8.0",
+    "web3": "^1.2.11"
+  },
+  "scripts": {
+    "start": "cross-env REACT_APP_CHAIN_ENV=main craco start",
+    "start:kovan": "cross-env REACT_APP_CHAIN_ENV=kovan craco start",
+    "start:online-test": "cross-env REACT_APP_CHAIN_ENV=online-test craco start",
+    "build": "cross-env REACT_APP_CHAIN_ENV=main CI= GENERATE_SOURCEMAP=false craco build",
+    "build:kovan": "cross-env REACT_APP_CHAIN_ENV=kovan CI= GENERATE_SOURCEMAP=false craco build",
+    "build:online-test": "cross-env REACT_APP_CHAIN_ENV=online-test CI= GENERATE_SOURCEMAP=false craco build",
+    "pkg:online": "rm -rf build* && npm run build && tar -zcvf build-online.tar.gz build",
+    "pkg:online-test": "rm -rf build* && npm run build:online-test && tar -zcvf build-online-test.tar.gz build",
+    "pkg:kovan": "rm -rf build* && npm run build:kovan && tar -zcvf build-kovan.tar.gz build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "deploy": "yarn build && cp ./build/index.html ./build/200.html && surge ./build sushiswap.org",
+    "commit": "git-cz"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^5.6.4",
+    "@types/numeral": "0.0.28",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/styled-components": "^5.1.2",
+    "babel-plugin-import": "^1.13.0",
+    "commitizen": "^4.2.1",
+    "craco-less": "^1.17.0",
+    "cross-env": "^7.0.2",
+    "git-cz": "^4.7.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "semi": false,
+    "singleQuote": true
+  }
+}
